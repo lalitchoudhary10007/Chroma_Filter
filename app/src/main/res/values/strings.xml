@@ -1,0 +1,9 @@
+<resources>
+
+    <string name="app_name">GPUImage for Android</string>
+    <string name="title_activity_activity_main">GPUImage Sample</string>
+    <string-array name="timer">
+        <item>0 Sec</item>
+        <item>10 Sec</item>
+    </string-array>
+</resources>

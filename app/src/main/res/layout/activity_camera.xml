@@ -1,0 +1,227 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+    <!--<android.opengl.GLSurfaceView-->
+    <!--android:id="@+id/surfaceView"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:layout_above="@+id/bar" />-->
+
+    <!--<jp.co.cyberagent.android.gpuimage.GLTextureView-->
+    <!--android:id="@+id/surfaceView"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:layout_above="@+id/bar" />-->
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <jp.co.cyberagent.android.gpuimage.GPUImageView
+            android:id="@+id/surfaceView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:gpuimage_show_loading="false"
+            app:gpuimage_surface_type="texture_view"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"/> <!-- surface_view or texture_view -->
+
+        <ImageView
+            android:id="@+id/frame_img"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/frame"
+            android:visibility="gone"/>
+
+    </FrameLayout>
+
+    <ImageView
+            android:id="@+id/img_switch_camera"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="28dp"
+            android:layout_alignParentRight="true"
+            android:contentDescription="@null"
+            android:padding="10dp"
+            android:src="@drawable/ic_switch_camera"
+            tools:ignore="HardcodedText,RtlHardcoded"/>
+
+    <LinearLayout
+            android:id="@+id/bar"
+            android:visibility="visible"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="#000000"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+        <SeekBar
+                android:id="@+id/seekBar"
+                android:visibility="gone"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:max="100"/>
+        <!--<HorizontalScrollView
+                android:layout_width="match_parent"
+                android:scrollbars="none"
+                android:layout_height="wrap_content">-->
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:weightSum="5"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/button_choose_frame"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="68dp"
+                android:layout_marginLeft="16dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/frame"
+                android:text="Choose Filter"
+                tools:ignore="HardcodedText"/>
+
+            <ImageView
+                    android:id="@+id/button_choose_filter"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="68dp"
+                    android:layout_marginLeft="16dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/filter_one"
+                    android:text="Choose Filter"
+                    tools:ignore="HardcodedText"/>
+
+
+
+            <ImageView
+                    android:id="@+id/button_choose_filter_two"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+
+                    android:layout_height="68dp"
+                    android:visibility="visible"
+                    android:layout_marginLeft="16dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/filter_two"
+            />
+
+            <ImageView
+                    android:id="@+id/button_choose_filter_three"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+
+                    android:layout_height="68dp"
+                    android:visibility="visible"
+                    android:layout_marginLeft="16dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/filter_three"
+            />
+
+            <ImageView
+                    android:id="@+id/button_choose_filter_four"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+
+                    android:layout_height="68dp"
+                    android:visibility="visible"
+                    android:layout_marginLeft="16dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/filter_four"
+            />
+            <ImageView
+                    android:id="@+id/button_choose_filter_five"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+
+                    android:layout_height="68dp"
+                    android:visibility="visible"
+                    android:layout_marginLeft="16dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/filter_five"
+            />
+        </LinearLayout>
+        <!-- </HorizontalScrollView>-->
+
+    </LinearLayout>
+    <ImageButton
+            android:id="@+id/button_capture"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginBottom="80dp"
+            android:layout_marginRight="28dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@null"
+            android:src="@android:drawable/ic_menu_camera"/>
+
+    <ImageView
+            android:id="@+id/button_whatsapp_share"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginBottom="140dp"
+            android:visibility="gone"
+            android:layout_marginRight="28dp"
+            android:layout_width="60dp"
+            android:scaleType="fitXY"
+            android:layout_height="58dp"
+            android:padding="8dp"
+            android:contentDescription="@null"
+            android:src="@drawable/whatsapp_share"/>
+
+    <ImageView
+            android:id="@+id/button_gmail_share"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginBottom="200dp"
+            android:visibility="gone"
+            android:layout_marginRight="28dp"
+            android:layout_width="68dp"
+            android:scaleType="fitXY"
+            android:layout_height="58dp"
+            android:contentDescription="@null"
+            android:src="@drawable/gmail_logo"/>
+
+    <TextView
+            android:id="@+id/tv_counter"
+            android:text="10"
+            android:visibility="gone"
+            android:gravity="center"
+            android:textSize="78dp"
+            android:alpha="200"
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+    />
+    <TextView android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:textColor="#ffffff"
+              android:layout_alignParentEnd="true"
+              android:layout_marginRight="28dp"
+              android:text="Set Timer"
+              android:textStyle="bold"
+              android:layout_marginLeft="8dp"
+              android:layout_above="@+id/counter"/>
+    <Spinner
+            android:text="10 sec"
+            android:background="@color/grey"
+            android:id="@+id/counter"
+            android:layout_marginRight="28dp"
+            android:layout_above="@+id/button_capture"
+            android:layout_width="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:entries="@array/timer"
+            android:layout_marginLeft="8dp"
+
+            android:layout_marginBottom="28dp"
+            android:layout_height="wrap_content"/>
+</RelativeLayout>

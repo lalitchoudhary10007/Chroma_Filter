@@ -1,0 +1,52 @@
+{
+    "logs": [
+        {
+            "outputFile": "D:\\Camera\\android-gpuimage-master\\library\\build\\intermediates\\incremental\\mergeReleaseResources\\merged.dir\\values\\values.xml",
+            "map": [
+                {
+                    "source": "D:\\Camera\\android-gpuimage-master\\library\\src\\main\\res\\values\\attrs.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endLines": "8",
+                        "endColumns": "24",
+                        "endOffsets": "357"
+                    },
+                    "to": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endLines": "8",
+                        "endColumns": "24",
+                        "endOffsets": "355"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "D:\\Camera\\android-gpuimage-master\\library\\build\\intermediates\\res\\merged\\release\\values\\values.xml",
+            "map": [
+                {
+                    "source": "D:\\Camera\\android-gpuimage-master\\library\\src\\main\\res\\values\\attrs.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endLines": "8",
+                        "endColumns": "24",
+                        "endOffsets": "357"
+                    },
+                    "to": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endLines": "8",
+                        "endColumns": "24",
+                        "endOffsets": "355"
+                    }
+                }
+            ]
+        }
+    ]
+}
